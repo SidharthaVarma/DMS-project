@@ -37,7 +37,7 @@ Includes a UI for document sharing permissions but connection to backend is part
 ### ⚙️ Local Setup & Installation
 
 ### 1️⃣ Clone the Repo
--cd backend
+- cd backend
 - npm install
 - npm start
 - Backend hosted at:
@@ -48,20 +48,20 @@ Includes a UI for document sharing permissions but connection to backend is part
 
 ### 3️⃣ Frontend Setup
 -Open another terminal:
--cd frontend
--npm install
--ng serve -o
+- cd frontend
+- npm install
+- ng serve -o
 
 
 -Frontend hosted at:
 ➡ http://localhost:4200
 
 ###🔑 Test Login Credentials
--Email	Password
--test@example.com
+- Email	Password
+- test@example.com
 -	123456
--ksvarma2005@gmail.com
--123456
+- ksvarma2005@gmail.com
+- 123456
 
 ➡ New users can also register — saved directly in MongoDB.
 
@@ -91,3 +91,4 @@ Suggestions & pull requests are always welcome!
 
 git clone https://github.com/SidharthaVarma/DMS-project.git
 cd DMS-project
+
