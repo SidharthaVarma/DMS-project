@@ -1,156 +1,89 @@
-﻿# DMS-project
-# 📁 DMS - Document Management System
+project:
+  name: "DMS - Document Management System"
+  description: >
+    DMS is a full-stack Document Management System allowing secure document upload,
+    management, search, and download. Authentication ensures users only view their 
+    own documents.
 
-DMS is a full-stack Document Management System that enables users to securely upload, manage, search, and delete documents.  
-It includes authentication and **document sharing permissions**, allowing selected users to view shared files.
+features:
+  - title: "JWT Authentication"
+    details: "Secure login & register"
+  - title: "Upload Documents"
+    details: "Upload with title, description & tags"
+  - title: "View/Download Files"
+    details: "Secure document access"
+  - title: "Document Search"
+    details: "Search by title or description"
+  - title: "Delete Documents"
+    details: "Files can be removed when needed"
+  - title: "Responsive UI"
+    details: "Angular + Material Design"
 
----
+tech_stack:
+  frontend:
+    - "Angular 16+"
+    - "Angular Material"
+    - "TypeScript"
+  backend:
+    - "Node.js"
+    - "Express.js"
+    - "MongoDB + Mongoose"
+    - "JWT Authentication"
+    - "Multer (File Uploads)"
 
-## 🚀 Features
+structure:
+  DMS-project:
+    backend:
+      includes:
+        - "models/"
+        - "routes/"
+        - "middleware/"
+        - "uploads/"
+        - "server.js"
+        - "package.json"
+        - ".env"
+    frontend:
+      includes:
+        - "src/"
+        - "angular.json"
+        - "package.json"
 
-| Feature | Description |
-|--------|-------------|
-| 🔐 User Authentication | Register & Login using JWT Tokens |
-| 📤 Upload Documents | Upload with title, description & tags |
-| 📄 View / Download Files | Safely access stored documents |
-| 🔍 Search | Search documents by title or description |
-| ❌ Delete Documents | Remove files from system |
-| 👥 Share Permissions | Allow other users to view selected docs |
-| 🎨 Modern UI | Responsive Angular + Material Design |
+local_setup:
+  clone:
+    - "git clone https://github.com/SidharthaVarma/DMS-project.git"
+    - "cd DMS-project"
 
----
+  backend:
+    - "cd backend"
+    - "npm install"
+    - "npm start"
+    url: "http://localhost:5000"
 
-## 🛠 Tech Stack
+  frontend:
+    - "cd frontend"
+    - "npm install"
+    - "ng serve -o"
+    url: "http://localhost:4200"
 
-### Frontend
-- Angular 16+
-- Angular Material
-- TypeScript
+test_credentials:
+  - email: "test@example.com"
+    password: "123456"
+  - email: "ksvarma2005@gmail.com"
+    password: "123456"
+  note: "Users auto-stored in MongoDB after registration."
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB (Atlas)
-- JSON Web Token (JWT)
+known_limitations:
+  - "Permissions UI partially done"
+  - "Version control only implemented in backend (tested via Postman)"
 
----
+future_enhancements:
+  - "Document sharing with UI"
+  - "File version tracking + restore"
+  - "Admin dashboard"
+  - "PDF/Image preview"
+  - "Activity logs"
 
-## 📁 Project Structure
-
-DMS-project/
-│
-├── backend/
-│ ├── models/
-│ ├── routes/
-│ ├── middleware/
-│ ├── uploads/
-│ ├── server.js
-│ ├── package.json
-│ └── .env
-│
-└── frontend/
-├── src/
-├── angular.json
-├── package.json
-
----
-
-## ⚙️ Setup Instructions (Local Machine)
-
-### 🔹 1️⃣ Clone Repository
-
-command:
-git clone https://github.com/SidharthaVarma/DMS-project.git
-cd DMS-project
-
-
----
-
-### 🔹 2️⃣ Backend Setup
-
-################# command:
-cd backend
-npm install
-
-already .env is added in backend so no need of adding it.... But I know it is a bad pratice to push .env file to github.....but for assignment - 2 evalution i have done it.
-
-
-################Run backend:
-npm start
-
-
-Backend URL → http://localhost:5000
-
----
-
-### 🔹 3️⃣ Frontend Setup
-
-Open second terminal:
-
-cd ../frontend
-npm install
-ng serve -o
-
-
-Frontend URL → http://localhost:4200
-
----
-
-## 🔑 Login Details
-
-You can **register directly** in the application.  
-New user will be stored in MongoDB automatically.
-
----
-
-## 👥 Permissions Feature
-
-Document owners can share access:
-
-| Owner Action | Effect |
-|-------------|--------|
-| Add user email in Permission modal | That user can view document |
-| Remove permission | Access revoked |
-
-Shared documents appear in the other user's dashboard.
-
-two accounts :   please login into this and have a view
-test@example.com
-123456
-
-ksvarma2005@gmail.com
-123456
----
-###########################################
-couldn't implement permission grants to other users
-and Version control
-done in the backend part of the code and tested it in the postman
-but couldn't implement that in frontend
-################################################
-
-## 🧩 Future Enhancements
-
-- File version control system  
-- Admin dashboard  
-- File preview (PDF/Image viewer)  
-- Activity logs for traceability  
-
----
-
-## 🤝 Contributing
-
-This project is developed for education & portfolio purposes.  
-Contributions are welcome!
-
----
-
-## 📧 Contact
-
-👤 **Sidhartha Varma**  
-GitHub: https://github.com/SidharthaVarma  
-
----
-
-✨ Thank you for reviewing my project!  
-
-
+contact:
+  author: "Sidhartha Varma"
+  github: "https://github.com/SidharthaVarma"
+  message: "Thank you for reviewing my project!"
