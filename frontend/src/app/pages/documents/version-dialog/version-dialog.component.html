@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Versions</h2>
+
+<mat-dialog-content>
+  <div *ngIf="loading">Loading...</div>
+
+  <mat-list *ngIf="!loading">
+    <mat-list-item *ngFor="let v of versions">
+      v{{v.versionNumber}} - {{v.createdAt | date:'short'}}
+      <button mat-button (click)="openVersion(v)">Open</button>
+    </mat-list-item>
+  </mat-list>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Close</button>
+</mat-dialog-actions>

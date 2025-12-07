@@ -1,0 +1,117 @@
+<div class="documents-wrapper">
+
+  <!-- 🔍 Search + Toggle View -->
+  <mat-card class="toolbar-card">
+    <div class="toolbar-actions">
+
+      <mat-form-field appearance="outline" class="search-input">
+        <mat-label>Search documents...</mat-label>
+        <input matInput [(ngModel)]="searchTerm" (keyup.enter)="onSearch()">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="icon-btn" (click)="onSearch()">
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <button mat-icon-button class="toggle-view-btn" (click)="toggleView()">
+  <mat-icon>{{ isGridView ? 'view_list' : 'view_module' }}</mat-icon>
+</button>
+
+
+
+    </div>
+
+    <!-- 📤 Upload Section -->
+    <div class="upload-section">
+
+      <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 10px; color: white;">
+  Upload New Document
+</h3>
+
+
+      <div class="upload-form">
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Title</mat-label>
+          <input matInput [(ngModel)]="title">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Description</mat-label>
+          <textarea matInput rows="2" [(ngModel)]="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Tags (comma separated)</mat-label>
+          <input matInput [(ngModel)]="tags">
+        </mat-form-field>
+
+        <input class="file-input" type="file" (change)="onFileSelected($event)">
+
+        <button mat-raised-button color="accent" class="upload-btn"
+                (click)="uploadDocument()" [disabled]="isUploading">
+          <mat-icon>upload_file</mat-icon>
+          {{ isUploading ? 'Uploading...' : 'Upload Document' }}
+        </button>
+      </div>
+
+    </div>
+  </mat-card>
+
+
+
+
+  <!-- 📄 Documents List -->
+  <mat-card class="list-card">
+    <h3 class="section-title">My Documents</h3>
+
+    <div class="loading" *ngIf="isLoading">Loading documents...</div>
+    <div class="empty" *ngIf="!isLoading && documents.length === 0">No documents found</div>
+
+    <div class="documents-container" [ngClass]="isGridView ? 'grid-view' : 'list-view'">
+
+      <mat-card class="doc-card" *ngFor="let doc of documents">
+
+        <div class="file-thumb">
+          <mat-icon class="file-icon">description</mat-icon>
+        </div>
+
+        <h4 class="doc-title">{{ doc.title || 'Untitled Document' }}</h4>
+
+        <p class="doc-description">{{ doc.description || 'No description available' }}</p>
+
+        <div class="tags-container" *ngIf="doc.tags?.length">
+          <span class="tag" *ngFor="let t of doc.tags">
+            {{ t }}
+          </span>
+        </div>
+
+        <div class="doc-meta">
+          <span>V {{ doc.currentVersion }}</span>
+          <span>{{ doc.createdAt | date:'mediumDate' }}</span>
+        </div>
+
+        <div class="btn-group">
+  <button mat-stroked-button color="primary" (click)="previewDoc(doc)">
+    <mat-icon>visibility</mat-icon> View
+  </button>
+
+  <button mat-stroked-button color="accent" (click)="openVersionDialog(doc._id)">
+    <mat-icon>history</mat-icon> Versions
+  </button>
+
+  <button mat-stroked-button color="accent" (click)="openPermissionsDialog(doc._id)">
+    <mat-icon>share</mat-icon> Share
+  </button>
+
+  <button mat-stroked-button color="warn" (click)="deleteDocument(doc._id)">
+    <mat-icon>delete</mat-icon> Delete
+  </button>
+</div>
+
+      </mat-card>
+    </div>
+
+  </mat-card>
+
+</div>

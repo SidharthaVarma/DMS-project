@@ -1,0 +1,38 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.register-card {
+  width: 400px;
+  padding: 25px;
+  text-align: center;
+  background: #2f2f2f;
+  color: white;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.btn-register {
+  width: 100%;
+  background-color: #6a1b9a;
+  color: white;
+}
+
+.text-small {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+a {
+  color: #0096ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

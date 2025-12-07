@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="logo">DMS</div>
+
+  <ul class="nav-links">
+    <li><a routerLink="/home">Home</a></li>
+
+    <!-- Show login only when NOT logged in -->
+    <li *ngIf="!auth.getToken()">
+      <a routerLink="/login">Login</a>
+    </li>
+
+    <!-- Show logout only when logged in -->
+    <li *ngIf="auth.getToken()">
+      <button mat-button (click)="logout()">Logout</button>
+    </li>
+  </ul>
+</nav>

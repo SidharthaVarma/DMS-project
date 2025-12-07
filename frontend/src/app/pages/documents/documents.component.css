@@ -1,0 +1,172 @@
+.documents-wrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Top toolbar (search + upload) */
+.toolbar-card {
+  padding: 20px;
+  background: #102b0f;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.search-input {
+  flex: 1;
+}
+
+/* Upload section */
+.upload-section {
+  border-top: 1px solid #15338e;
+  margin-top: 12px;
+  padding-top: 16px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.upload-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.file-input {
+  margin-top: 4px;
+}
+
+.upload-btn {
+  margin-top: 4px;
+  width: 100%;
+  padding: 12px 0;
+}
+
+/* Documents list card */
+.list-card {
+  padding: 20px;
+  background: #9f3030;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.list-card .section-title {
+  margin-bottom: 12px;
+}
+
+/* Grid / list container */
+.documents-container.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.documents-container.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individual document card */
+.doc-card {
+  padding: 16px;
+  border-radius: 14px;
+  background: #fdfefe;
+  border: 1px solid #e3e6ef;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.doc-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* File icon */
+.file-thumb {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.file-icon {
+  font-size: 40px;
+  color: #004740; /* your brand green */
+}
+
+/* Text */
+.doc-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.doc-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Tags */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #e6f7f4;
+  border: 1px solid #b6ebe0;
+  color: #004740;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Meta info (version + date) */
+.doc-meta {
+  font-size: 11px;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Buttons */
+.btn-group {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+.loading,
+.empty {
+  text-align: center;
+  padding: 12px;
+  color: #666;
+}
+.toggle-view-btn mat-icon {
+  font-size: 32px;       /* Increase icon size */
+  width: 32px;
+  height: 32px;
+  color: #005d5f;        /* Adjust color if needed */
+}

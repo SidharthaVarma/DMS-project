@@ -1,0 +1,32 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: #f5f5f5;
+}
+
+.login-card {
+  width: 380px;
+  padding: 20px;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-login, .btn-google {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.text-small {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.btn-google img {
+  vertical-align: middle;
+}

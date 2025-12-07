@@ -1,0 +1,31 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <h2>DMS Login</h2>
+
+    <form (ngSubmit)="onLogin()" #form="ngForm">
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="email" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" [(ngModel)]="password" required>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">
+  {{ isLoading ? 'Logging in...' : 'Login' }}
+</button>
+
+
+      <button mat-raised-button color="warn" class="btn-google" type="button" (click)="loginWithGoogle()">
+        <img src="https://developers.google.com/identity/images/g-logo.png" width="18">
+        &nbsp; Sign in with Google
+      </button>
+
+      <p class="text-small">
+        Don’t have an account? <a routerLink="/register">Register</a>
+      </p>
+    </form>
+  </mat-card>
+</div>

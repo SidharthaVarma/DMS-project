@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Share Permissions</h2>
+
+<mat-dialog-content>
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>View Users (IDs)</mat-label>
+    <textarea matInput [(ngModel)]="viewUsers"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Edit Users (IDs)</mat-label>
+    <textarea matInput [(ngModel)]="editUsers"></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button color="primary" (click)="savePermissions()">Save</button>
+</mat-dialog-actions>
