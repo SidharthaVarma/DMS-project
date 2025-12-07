@@ -56,7 +56,7 @@ Includes a UI for document sharing permissions but connection to backend is part
 -Frontend hosted at:
 ➡ http://localhost:4200
 
-###🔑 Test Login Credentials
+##🔑 Test Login Credentials
 - Email	Password
 - test@example.com
 -	123456
@@ -65,7 +65,7 @@ Includes a UI for document sharing permissions but connection to backend is part
 
 ➡ New users can also register — saved directly in MongoDB.
 
-###⚠️ Pending Feature Integrations
+##⚠️ Pending Feature Integrations
 -Feature	Status
 -Permissions Management UI	Backend working, UI not integrated fully
 -Version History System	Backend implemented but UI incomplete
@@ -79,16 +79,17 @@ Includes a UI for document sharing permissions but connection to backend is part
 
 -Admin dashboard & detailed access logs
 
-###🤝 Contributing
+##🤝 Contributing
 
 This project is built for learning and portfolio purposes.
 Suggestions & pull requests are always welcome!
 
-###📧 Contact
+##📧 Contact
 
-###👤 Sidhartha Varma
-###🔗 GitHub Profile → https://github.com/SidharthaVarma
+##👤 Sidhartha Varma
+##🔗 GitHub Profile → https://github.com/SidharthaVarma
 
 git clone https://github.com/SidharthaVarma/DMS-project.git
 cd DMS-project
+
 
