@@ -58,7 +58,7 @@ Includes a UI for document sharing permissions but connection to backend is part
 
 ##🔑 Test Login Credentials
 - Email	Password
-- test@example.com
+- test@gmail.com
 -	123456
 - ksvarma2005@gmail.com
 - 123456
@@ -91,5 +91,6 @@ Suggestions & pull requests are always welcome!
 
 git clone https://github.com/SidharthaVarma/DMS-project.git
 cd DMS-project
+
 
 
