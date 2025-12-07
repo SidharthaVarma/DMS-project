@@ -1,89 +1,93 @@
-project:
-  name: "DMS - Document Management System"
-  description: >
-    DMS is a full-stack Document Management System allowing secure document upload,
-    management, search, and download. Authentication ensures users only view their 
-    own documents.
+# 📁 DMS - Document Management System
 
-features:
-  - title: "JWT Authentication"
-    details: "Secure login & register"
-  - title: "Upload Documents"
-    details: "Upload with title, description & tags"
-  - title: "View/Download Files"
-    details: "Secure document access"
-  - title: "Document Search"
-    details: "Search by title or description"
-  - title: "Delete Documents"
-    details: "Files can be removed when needed"
-  - title: "Responsive UI"
-    details: "Angular + Material Design"
+DMS is a secure web-based Document Management System allowing users to authenticate, upload, search, view, and delete documents easily.
 
-tech_stack:
-  frontend:
-    - "Angular 16+"
-    - "Angular Material"
-    - "TypeScript"
-  backend:
-    - "Node.js"
-    - "Express.js"
-    - "MongoDB + Mongoose"
-    - "JWT Authentication"
-    - "Multer (File Uploads)"
+Includes a UI for document sharing permissions but connection to backend is partially pending.
 
-structure:
-  DMS-project:
-    backend:
-      includes:
-        - "models/"
-        - "routes/"
-        - "middleware/"
-        - "uploads/"
-        - "server.js"
-        - "package.json"
-        - ".env"
-    frontend:
-      includes:
-        - "src/"
-        - "angular.json"
-        - "package.json"
+---
 
-local_setup:
-  clone:
-    - "git clone https://github.com/SidharthaVarma/DMS-project.git"
-    - "cd DMS-project"
+## 🚀 Features
 
-  backend:
-    - "cd backend"
-    - "npm install"
-    - "npm start"
-    url: "http://localhost:5000"
+| Feature | Description |
+|--------|-------------|
+| 🔐 User Authentication | Secure Login & Signup using JWT |
+| 📤 Document Upload | Store files with title, description & tags |
+| 📄 View & Download | Access files stored in backend |
+| 🔍 Search Bar | Instant search by title / description |
+| ❌ File Delete | Remove unnecessary documents |
+| 🎨 Modern UI | Angular Material responsive interface |
 
-  frontend:
-    - "cd frontend"
-    - "npm install"
-    - "ng serve -o"
-    url: "http://localhost:4200"
+---
 
-test_credentials:
-  - email: "test@example.com"
-    password: "123456"
-  - email: "ksvarma2005@gmail.com"
-    password: "123456"
-  note: "Users auto-stored in MongoDB after registration."
+## 🛠 Tech Stack
 
-known_limitations:
-  - "Permissions UI partially done"
-  - "Version control only implemented in backend (tested via Postman)"
+### ⭐ Frontend
+- Angular 16+
+- Angular Material
+- TypeScript
 
-future_enhancements:
-  - "Document sharing with UI"
-  - "File version tracking + restore"
-  - "Admin dashboard"
-  - "PDF/Image preview"
-  - "Activity logs"
+### ⚙ Backend
+- Node.js + Express.js
+- MongoDB Atlas + Mongoose
+- Multer (File Upload Handling)
+- JWT Authentication
 
-contact:
-  author: "Sidhartha Varma"
-  github: "https://github.com/SidharthaVarma"
-  message: "Thank you for reviewing my project!"
+---
+
+### ⚙️ Local Setup & Installation
+
+### 1️⃣ Clone the Repo
+-cd backend
+- npm install
+- npm start
+- Backend hosted at:
+➡ http://localhost:5000
+
+📌 NOTE: .env is already included (ONLY for evaluation purposes)
+⚠ Normally, .env should NOT be committed publicly.
+
+### 3️⃣ Frontend Setup
+-Open another terminal:
+-cd frontend
+-npm install
+-ng serve -o
+
+
+-Frontend hosted at:
+➡ http://localhost:4200
+
+###🔑 Test Login Credentials
+-Email	Password
+-test@example.com
+-	123456
+-ksvarma2005@gmail.com
+-123456
+
+➡ New users can also register — saved directly in MongoDB.
+
+###⚠️ Pending Feature Integrations
+-Feature	Status
+-Permissions Management UI	Backend working, UI not integrated fully
+-Version History System	Backend implemented but UI incomplete
+-🧩 Future Enhancements
+
+-Complete document permissions frontend integration
+
+-Version history with restore option
+
+-File preview (PDF/Image viewer)
+
+-Admin dashboard & detailed access logs
+
+###🤝 Contributing
+
+This project is built for learning and portfolio purposes.
+Suggestions & pull requests are always welcome!
+
+###📧 Contact
+
+###👤 Sidhartha Varma
+###🔗 GitHub Profile → https://github.com/SidharthaVarma
+
+git clone https://github.com/SidharthaVarma/DMS-project.git
+cd DMS-project
